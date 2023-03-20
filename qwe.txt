@@ -1,4 +1,0 @@
-Database v.0.01
-Фамилия - Имя - Отчество - Номер телефона
-iyunin - vlad - anat - 04
-iyunina - marina - alek - 08
