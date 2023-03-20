@@ -39,6 +39,7 @@ def get_read(mode_change):
             for text in file:
                 print(text)
             file.readlines()
+            file.close()
             view.get_mode_change()
 
 # Добавление данных в файл
@@ -71,11 +72,11 @@ def get_change(mode_change):
             text_existing = input('Заменяемый текст: ')
             text_replaced = input('Новое значение: ')
             print()
-            with fileinput.input(files=name_file, inplace=False, backup='', mode='r', openhook=None, encoding=None, errors=None) as file:
+            with fileinput.input(files=name_file, inplace=True, backup=False, mode='r', openhook=None) as file:
                 for text in file:
                     print(text.replace(text_existing, text_replaced), end='')
-                    sys.stdout.write(text)
         change = int(input('\n 1 - Продолжить изменения:\n 2 - Завершить:\n Input: '))
+        print()
     view.get_mode_change()
 
 # Поиск существующих данных
