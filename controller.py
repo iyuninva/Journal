@@ -75,7 +75,8 @@ def get_change(mode_change):
             with fileinput.input(files=name_file, inplace=True, backup=False, mode='r', openhook=None) as file:
                 for text in file:
                     print(text.replace(text_existing, text_replaced), end='')
-        change = int(input('\n 1 - Продолжить изменения:\n 2 - Завершить:\n Input: '))
+        change = int(
+            input('\n 1 - Продолжить изменения:\n 2 - Завершить:\n Input: '))
         print()
     view.get_mode_change()
 
